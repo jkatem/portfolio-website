@@ -4,11 +4,11 @@ import './About.css'
 
 function About() {
     return (
-        <div id="About" class="aboutsection">
-            <h1 class="abouth1">
-                Software Engineer 
+        <div id="About" className="aboutsection">
+            <h1 className="abouth1">
+                <Link to='/'>JENNIFER MIAO</Link> | Software Engineer 
             </h1>
-            <p class="aboutbodytext">
+            <p className="aboutbodytext">
                 I am a Software Engineer based out of San Francisco, CA.              
             <br/>
             <br/>
