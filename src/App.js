@@ -1,8 +1,6 @@
 import React from 'react'
+// import './App.css'
 import Home from './components/Home'
-import About from './components/About'
-import Project from './components/Project'
-import Header from './components/Header'
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -15,21 +13,9 @@ const App = () => {
   // }
 
   return (
-   
-      <React.Fragment>
-        <Header/>
-        <About/>
-        <div>
-          <Switch>
-            <Route exact path ='/' component={Home} /> 
-            <Route path ='/about' component={About} />
-            <Route path ='/projects' component={Project}/>
-          </Switch>
-        </div>
-
-      </React.Fragment>
-   
-
+    <div className="app">
+      <Home />
+    </div>
   )
 }
 export default App
