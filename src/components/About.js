@@ -4,17 +4,15 @@ import './About.css'
 
 function About() {
     return (
-        <div id="About" className="aboutsection">
-            <h1 className="abouth1">
-                <Link to='/'>JENNIFER MIAO</Link> | Software Engineer 
-            </h1>
+        <div id="About" className="aboutsection">            
             <p className="aboutbodytext">
-                I am a Software Engineer based out of San Francisco, CA.              
+                I am a Software Engineer based out of San Francisco, CA with 
+                {/* Skills I want to mention: research, strong communication    */}
             <br/>
             <br/>
             Interested in learning more?
             </p>
-            <Link to="/PDFResume">Resume</Link> | <Link to="/linkedin">Linkedin</Link>
+            <Link to="/PDFResume">Resume</Link> | <Link to="/linkedin">Linkedin</Link> | <Link to="/github">Github</Link>
         </div>
     )
 }
