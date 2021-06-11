@@ -2,23 +2,33 @@ import React from 'react'
 import Me from '../Images/Me.jpeg'
 import { Link } from 'react-router-dom'
 import './About.css'
+import { Table } from 'react-bootstrap'
 
 function About() {
     return (
-        <div id="About" >
-            <div className="flex-container">
-                <img src={Me} alt="Profile Pic"/>
-            
-                I am a Software Engineer based out of San Francisco, CA with a background in the legal field. akfjsakdfjkasfjsdfkaskfjsjdf akslfksajdf akslfj klsadfjaskf. Jkdfjs. ksdfjskd asjfksf aksfjkjf asfjskj.
-                {/* Skills I want to mention: research, strong communication    */}
-            </div>
-            <p>
-            Interested in learning more? 
-            
-            <Link to="/PDFResume">Resume</Link> | <Link to="/linkedin">Linkedin</Link> | <Link to="/Github">Github</Link>
-            </p>
-            
+        <>
+        <Table>
+            <tr>
+                <th>
+                    <img
+                        width={200}
+                        height={250}
+                        src={Me}
+                        alt="Profile Picture"
+                    />
+                </th>
+                <th>
+                    <p>
+                        I am a Software Engineer based out of San Francisco, CA with a background in the legal field.    
+                    </p>
+                </th>
+            </tr>
+        </Table>
+        <div>
+            <p>Interested in learning more?</p>
+            <a href="https://www.linkedin.com/in/jenmiao" target="_blank" class="orangebutton linkedin w-button">LinkedIn</a>
         </div>
+        </>
     )
 }
 
