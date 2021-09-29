@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(32, 77, 74);
+}  
+
+a {
+  padding: 20px
+}
+
+table {
+  padding: 20px;
+}
+
+.orangebutton.linkedin {
+  display: inline-block;
+  border-color: #0077b5;
+  background-color: transparent;
+  color: #080808;
+}
+
+img {
+  width: 200px;
+  height: 250px
+}
+

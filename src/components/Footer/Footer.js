@@ -11,14 +11,9 @@ import {
     useColorModeValue
 } from "@chakra-ui/react";
 import { SiLinkedin } from "react-icons/si"
-// import { FaGithub, FaLinkedin } from 'react-icons/fa';
-
-
-
 
 const Footer = () => {
     return (
-
         <Box
             bg={useColorModeValue(`gray.50`, `gray.900`)}
             color={useColorModeValue(`gray.700`, `gray.200`)}
@@ -40,7 +35,8 @@ const Footer = () => {
                     alignItems="center"
                 >
                 </Flex>
-                <Text display="flex" alignSelf="center" mx="auto">Built with: </Text>
+                <Text>Interested in learning more: </Text>
+                <Text display="flex" alignSelf="left" mx="auto">Built with: </Text>
                 <Stack
                     direction="row"
                     spacing={6}
@@ -53,14 +49,7 @@ const Footer = () => {
                     <Link href="https://www.linkedin.com/in/jenmiao" isExternal>
                         <SiLinkedin />
                     </Link>
-
-                    {/* <SocialIcons
-                        label="Instagram"
-                        href="https://www.instagram.com/michael.__.hall/"
-                    >
-                        <FaInstagram />
-                    </SocialIcons> */}
-                    </Stack>
+                </Stack>
             </SimpleGrid>
 
         </Box>

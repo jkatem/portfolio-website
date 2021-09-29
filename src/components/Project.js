@@ -3,37 +3,46 @@ import './Project.css'
 import test1 from '../Images/test1.jpeg'
 import test2 from '../Images/test2.jpeg'
 import test3 from '../Images/test3.jpeg'
+import { Card, Button } from 'react-bootstrap'
 
-// import { Link } from 'react-router-dom'
+class Project extends React.Component {
+    render(){
+        return (
+            <>
+            <Card style={{ width: '18rem', display: 'flex', flexDirection:'row', height:"auto", width:'auto' }}>
+                <Card.Img  variant="top" src={test1} style={{flex: 1}}/> 
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
 
-// const Project = () => {
-//     return (
-//         <div className="projects">
-//             <h3>DocuManage</h3>
-//             <Link to='https://github.com/jkatem/DocuManage'>sss</Link>
-            
-//             <h3>Sniff-n-play</h3>
-//             <Link to="https://github.com/jkatem/sniff_and_play">fksjfsjldfjjsf</Link>
-//         </div>
-//     )
+                <Card.Img variant="top" src={test2} /> 
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
 
-// }
-// export default Project;
-
-const Project = () => {
-    return (
-        <div>
-            <a className="arrow prev">Prev</a>
-            <a className="arrow next">Next</a>  
-
-            <ul id="carousel">
-                <li class="visible"><a href="https://github.com/jkatem/DocuManage"><img src={test1} alt="" /></a></li>
-                <li class="visible"><a href="https://github.com/jkatem/sniff_and_play"><img src={test2} alt="" /></a></li>
-                <li class="visible"><a href="https://github.com/jkatem/sniff_and_play"><img src={test3} alt="" /></a></li>
-
-            </ul>
-        </div>
-        
-    )
+                <Card.Img variant="top" src={test3} /> 
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>         
+        </Card>
+        </>
+        )
+    }
 }
+
 export default Project
