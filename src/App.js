@@ -1,15 +1,16 @@
 import React from "react";
 import Header from './components/NavBar/Header'
 import About from './components/About'
-import Project from './components/Project'
-// import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-// import "./styles.css";
+import Carousel from './components/Carousel/Carousel'
+import { SliderData } from './components/Carousel/SliderData'
+// import 
+
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.main = React.createRef();
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.main = React.createRef();
+  // }
 
   render() {
     return (
@@ -23,10 +24,8 @@ class App extends React.Component {
       </div>
       <div>
         <h2>My Latest Projects</h2>
-        <Project />
+        <Carousel projects={SliderData} />
       </div>
-      {/* </div> */}
-
       </>
     );
   }
