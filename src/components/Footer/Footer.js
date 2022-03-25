@@ -1,19 +1,53 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Row,
-  Column,
-  FooterLink,
-  Heading,
-} from "./FooterStyle";
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles, Theme } from '@material-ui/core/styles';
+import StyledLink from '../StyledLink';
+
+const useStyles = makeStyles((theme: Theme) => {
+  return {
+    main: {
+      backgroundColor: '#C4C4C4',
+      padding: theme.spacing(5),
+    },
+    linkBlock: {
+      '& > *': {
+        marginBottom: theme.spacing(1),
+      },
+    },
+    header: {
+      fontWeight: 'bold',
+    },
+    bottom: {
+      marginTop: theme.spacing(4),
+    },
+  };
+});
+
   
-const Footer = () => {
+function Footer() {
+
+  const classes = useStyles();
+
   return (
-    <Box>
-      <Container>  
-          <Row>
-            <FooterLink href="#">
+    <Grid className="Footer">
+      <Grid className={classes.main} container>  
+          <Grid
+            className={classes.linkBock}
+            container
+            item
+            xs={6}
+            direction="column"
+            alignItems="flex-start"
+          >
+            <Typography 
+              className={classes.header} align="center" 
+              gutterBottom>Jennifer Miao's Website
+            </Typography>
+            <StyledLink to="/About">About</StyledLink>
+          </Grid>
+
+            {/* <FooterLink href="#">
               <i className="fab fa-instagram">
                 <span style={{ marginLeft: "10px" }}>
                   Instagram
@@ -33,10 +67,9 @@ const Footer = () => {
                   Youtube
                 </span>
               </i>
-            </FooterLink>
-          </Row>
-      </Container>
-    </Box>
+            </FooterLink> */}
+        </Grid>
+    </Grid>
   );
 };
 export default Footer;
