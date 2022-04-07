@@ -4,14 +4,16 @@ import { NavLink, Link } from 'react-router-dom'
 
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import BottomNavigation from '@mui/material/BottomNavigation';
-// import StyledLink from '../StyledLink';
+
 
 const useStyles = makeStyles(theme => ({
     main: {
       backgroundColor: '#C4C4C4',
-      padding: theme.spacing(3),
+      padding: theme.spacing(2),
+      position: "fixed",
+      left: 0,
+      bottom: 0,
+      right: 0,
     },
     linkBlock: {
       '& > *': {
@@ -24,6 +26,10 @@ const useStyles = makeStyles(theme => ({
     bottom: {
       marginTop: theme.spacing(4),
     },
+    links: {
+      padding: '5px', 
+      color: 'black'
+    }
 }));
 
   
@@ -32,25 +38,42 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <>
-        <Grid className="Footer">
-      <Grid className={classes.main} container>  
+    <footer className="Footer">
+      <Grid className={classes.main} container>
+        <Grid container>
           <Grid
-            className={classes.linkBock}
+            className={classes.linkBlock}
             container
             item
             xs={6}
-            direction="column"
+            direction="row"
             alignItems="flex-start"
           >
-          <span>
-            <a href="https://github.com/jkatem">Github</a>&nbsp;&nbsp;
-            <a href="https://linkedin.com/in/jenmiao">Linkedin</a>&nbsp;&nbsp;
-          </span>  
-          </Grid>        
+            <a className={classes.links} href='https://www.linkedin.com/in/jenmiao'>LinkedIn</a>
+            <a className={classes.links} href='https://github.com/jkatem'>Github</a>
+          </Grid>
         </Grid>
-    </Grid>
-    </>
+      </Grid>
+    </footer>
+    // <>
+    //     <Grid className="Footer">
+    //   <Grid className={classes.main} container>  
+    //       <Grid
+    //         className={classes.linkBock}
+    //         container
+    //         item
+    //         xs={6}
+    //         direction="column"
+    //         alignItems="flex-start"
+    //       >
+    //       <span>
+    //         <a href="https://github.com/jkatem">Github</a>&nbsp;&nbsp;
+    //         <a href="https://linkedin.com/in/jenmiao">Linkedin</a>&nbsp;&nbsp;
+    //       </span>  
+    //       </Grid>        
+    //     </Grid>
+    // </Grid>
+    // </>
 
   );
 };
